@@ -5,10 +5,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
 const Navbar = () => {
+  const publicUrl = import.meta.env.VITE_BASE_URL;
+  
   return (
+    <>
     <div className="container-fluid container-xl position-relative d-flex align-items-center fixed-top">
       <a href="/" className="logo d-flex align-items-center me-auto">
-        <img src="/assets/img/logo_starwars.png" alt="Logo" />
+        <img alt="Logo"  src={`${publicUrl}/assets/img/logo_starwars.png`}/>
         {/* Uncomment if using text logo: <h1 className="sitename">TheEvent</h1> */}
       </a>
 
@@ -23,6 +26,7 @@ const Navbar = () => {
         <i className="bi bi-linkedin"></i> M. Ariq Fakhrizal
       </a>
     </div>
+    </>
   );
 };
 

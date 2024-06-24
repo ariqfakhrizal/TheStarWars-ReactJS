@@ -2,6 +2,8 @@
 import React from 'react';
 
 const Head = () => {
+  const publicUrl = import.meta.env.VITE_BASE_URL;
+  
   return (
     <>
       <meta charSet="utf-8" />
@@ -11,8 +13,8 @@ const Head = () => {
       <meta name="keywords" content="" />
 
       {/* Favicons */}
-      <link rel="icon" href="assets/img/favicon.png" />
-      <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
+      <link rel="icon" href={`${publicUrl}/assets/img/favicon.png`} />
+      <link rel="apple-touch-icon" href={`${publicUrl}/assets/img/apple-touch-icon.png`} />
 
       {/* Fonts */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,17 +25,17 @@ const Head = () => {
       />
 
       {/* Vendor CSS Files */}
-      <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-      <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-      <link href="/assets/vendor/aos/aos.css" rel="stylesheet" />
-      <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-      <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+      <link href={`${publicUrl}/assets/vendor/bootstrap/css/bootstrap.min.css`} rel="stylesheet" />
+      <link href={`${publicUrl}/assets/vendor/bootstrap-icons/bootstrap-icons.css`} rel="stylesheet" />
+      <link href={`${publicUrl}/assets/vendor/aos/aos.css`} rel="stylesheet" />
+      <link href={`${publicUrl}/assets/vendor/glightbox/css/glightbox.min.css`} rel="stylesheet" />
+      <link href={`${publicUrl}/assets/vendor/swiper/swiper-bundle.min.css`} rel="stylesheet" />
 
       {/* Main CSS File */}
-      <link href="/assets/css/main.css" rel="stylesheet" />
+      <link href={`${publicUrl}/assets/css/main.css`} rel="stylesheet" />
 
       
-      <link href="/assets/css/App.css" rel="stylesheet" />
+      <link href={`${publicUrl}/assets/css/App.css`} rel="stylesheet" />
 
       {/* Template Information */}
       <meta name="template" content="TheEvent" />
